@@ -33,10 +33,12 @@ export class AppComponent {
   }
 
 
-  abrir_ocupado(nombre:string, vencimiento:string){
+  abrir(nombre:string, vencimiento:string){
     this.modal.style.display = "block";
     var name = document.getElementById("nombre");
-    name.textContent = nombre;
+    var vence = document.getElementById("vencimiento");
+    name.textContent = "Alquilada por: "+nombre;
+    vence.textContent = "Vence el día: "+vencimiento;
   }
 
   cerrar() {

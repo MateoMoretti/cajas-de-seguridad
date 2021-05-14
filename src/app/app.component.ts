@@ -16,20 +16,7 @@ export class AppComponent {
 
     // Get the modal
     
-    this.modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == this.modal) {
-        this.modal.style.display = "none";
-      }
-    } 
+    this.modal = document.getElementById("myModal");    
   }
 
 
@@ -37,8 +24,15 @@ export class AppComponent {
     this.modal.style.display = "block";
     var name = document.getElementById("nombre");
     var vence = document.getElementById("vencimiento");
-    name.textContent = "Alquilada por: "+nombre;
-    vence.textContent = "Vence el día: "+vencimiento;
+    name.textContent = nombre;
+    vence.textContent = vencimiento;
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == this.modal) {
+        this.modal.style.display = "none";
+      }
+    } 
   }
 
   cerrar() {

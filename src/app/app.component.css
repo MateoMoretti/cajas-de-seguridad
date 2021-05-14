@@ -7,6 +7,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+}
+
 p {
     margin: 0;
 }
@@ -366,38 +375,6 @@ svg#clouds {
     opacity: 1;
 }
 
-.contenedor-caja-pendiente-expiracion {
-    width: 221.5px;
-    height: 112.1px;
-    border-radius: 51.9px;
-    background-color: #b6c720;
-}
-
-.contenedor-caja-alquilada {
-    width: 221.5px;
-    height: 112.1px;
-    border-radius: 51.9px;
-    background-color: #0dac65;
-}
-
-.contenedor-caja-disponible {
-    width: 221.5px;
-    height: 112.1px;
-    border-radius: 51.9px;
-    background-color: #828885;
-}
-
-.texto-dentro-de-las-cajas {
-    width: 84px;
-    height: 32px;
-    margin: 12.9px 0 0 16.3px;
-    font-family: Montserrat;
-    font-size: 26px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.2;
-    letter-spacing: normal;
-    text-align: center;
-    color: #ffffff;
+.body {
+    background-image: url('security.jpg');
 }

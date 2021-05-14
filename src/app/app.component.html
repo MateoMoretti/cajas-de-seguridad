@@ -1,20 +1,25 @@
 <div class="body">
-    <div class="toolbar" role="banner">
-        <a class="navbar-brand" href="#"><img src="/assets/imgs/logo-la-guardiana-home.svg"></a>
-        <div class="spacer"></div>
-
-        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx" style="margin-right: 10px;">
-
-            <div>
-                <a class="navbar-brand" href="#"><img src="/assets/imgs/icon-user-home.svg" class="icon-user-home"></a>
-            </div>
-            <div class="btn-group navbar-nav mr-3">
-                <a role="button" id="navbarDropdownUser" class="nav-link dropdown-toggle puntero" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
-                        USUARIO
-                    </a>
-            </div>
-        </div>
-    </div>
+  <nav class="nav py-1 navbar toolbar" id="toolbar">
+      <a class="navbar-brand" href="#"><img src="/assets/imgs/logo-la-guardiana-home.svg"></a>
+        <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Nombre de caja" aria-label="Search">
+        <button class="btn btn-sm btn-outline-light btn-salir mr-2" type="submit">Buscar</button>
+      </form>
+      <form class="d-flex">
+          <a class="navbar-brand" href="#"><img src="/assets/imgs/icon-user-home.svg" class="icon-user-home"></a>
+          <div class="btn-group navbar-nav mr-3">
+              <a role="button" id="navbarDropdownUser" class="nav-link dropdown-toggle puntero" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+                  USUARIO
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUser">
+                  <a class="dropdown-item" href="#">Ir a mi perfil</a>
+                  <hr class="dropdown-divider">
+                  <a class="dropdown-item" [routerLink]="['account', 'cambiar-contrasena']" routerLinkActive="active">Cambiar contraseña</a>
+              </div>
+          </div>
+          <button class="btn btn-sm btn-outline-light btn-salir mr-2">SALIR</button>
+      </form>
+  </nav>
 
 
     <div class="content" role="main">

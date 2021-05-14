@@ -87,7 +87,27 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn" (click)="abrir_ocupado('Mateo moretti', '06/07')">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" (click)="cerrar()">&times;</span>
+            <h3 id="nombre">Some nombre</h3>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
+
+
 </div>
+
 
 
 <router-outlet></router-outlet>

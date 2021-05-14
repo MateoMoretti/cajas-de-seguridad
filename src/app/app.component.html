@@ -1,29 +1,29 @@
 <div class="body">
-  <nav class="nav py-1 navbar p-5 toolbar" id="toolbar">
-      <a class="navbar-brand" href="#"><img src="/assets/imgs/logo-la-guardiana-home.svg"></a>
+    <nav class="nav py-1 navbar p-5 toolbar" id="toolbar">
+        <a class="navbar-brand" href="#"><img src="/assets/imgs/logo-la-guardiana-home.svg"></a>
+            <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Nombre de caja" aria-label="Search">
+            <button class="btn btn-sm btn-outline-light btn-salir mr-2" type="submit">Buscar</button>
+        </form>
         <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Nombre de caja" aria-label="Search">
-        <button class="btn btn-sm btn-outline-light btn-salir mr-2" type="submit">Buscar</button>
-      </form>
-      <form class="d-flex">
-          <a class="" href="#"><img src="/assets/imgs/icon-user-home.svg" class="icon-user-home"></a>
-          <div class="btn-group mt-1">
-              <a role="button" id="navbarDropdownUser" class="nav-link dropdown-toggle text-usuario text-white" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
-                  USUARIO
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUser">
-                  <a class="dropdown-item" href="#">Ir a mi perfil</a>
-                  <hr class="dropdown-divider">
-                  <a class="dropdown-item" [routerLink]="['account', 'cambiar-contrasena']" routerLinkActive="active">Cambiar contraseña</a>
-              </div>
-          </div>
-          <button class="btn btn-sm btn-outline-light btn-salir mr-2">SALIR</button>
-      </form>
-  </nav>
+            <a class="" href="#"><img src="/assets/imgs/icon-user-home.svg" class="icon-user-home"></a>
+            <div class="btn-group">
+                <a role="button" id="navbarDropdownUser" class="nav-link dropdown-toggle text-usuario text-white" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
+                    USUARIO
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUser">
+                    <a class="dropdown-item" href="#">Ir a mi perfil</a>
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item" [routerLink]="['account', 'cambiar-contrasena']" routerLinkActive="active">Cambiar contraseña</a>
+                </div>
+            </div>
+            <button class="btn btn-sm btn-outline-light btn-salir mr-2">SALIR</button>
+        </form>
+    </nav>
 
 
     <div class="content" role="main">
-        <h1 style="color: white;">Cajas de seguridad</h1>
+        <h1 style="color: black;">Cajas de seguridad</h1>
         <div class="row" style="margin-top: 35px;">
             <div class="tooltip ocupado" (click)="abrir('Alquilada por: Kyrie Irving', 'Vence el día: 06/10')">
                 <p class="style-text">Caja 1</p>

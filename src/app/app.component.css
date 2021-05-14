@@ -20,7 +20,7 @@
     width: 70px;
     height: 35px;
     font-family: Montserrat;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -29,6 +29,10 @@
     text-align: center;
     color: #ffffff;
   }
+
+.cursor-pointer{
+    cursor: pointer;
+}  
 
 .toolbar {
     position: relative;
@@ -95,9 +99,13 @@
     left: 50%;
     margin-left: -60px;
     /* Fade in tooltip */
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s;
     padding: 5px;
+}
+
+.tooltip {
+    opacity: 1 !important;
 }
 
 .tooltip .tooltiptext::after {
@@ -140,7 +148,7 @@
 }
 
 .body {
-    background-color: rgb(99, 99, 99);
+    background-color: white !important;
     background-attachment: fixed;
     background-size: 100% 100%;
 }

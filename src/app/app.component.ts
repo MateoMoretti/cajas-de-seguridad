@@ -76,15 +76,14 @@ export class AppComponent {
 
     
     titular.textContent = this.tipo_modal[tipo_modal];
-    personas_permitidas.textContent = "";
     if(tipo_modal != 2){
       console.log(tipo_modal);
       personas_permitidas.textContent = "Otras personas con acceso: "+this.permitidas[numero];
       titular.textContent += this.personas[numero];
+      inicio.textContent = "Fecha de inicio: "+this.fechas_inicio[numero];
+      duracion.textContent = "Duración del contrato: "+this.duraciones[numero];
+      vencimiento.textContent = "Fecha de finalización: "+this.fechas_fin[numero];
     }
-    inicio.textContent = "Fecha de inicio: "+this.fechas_inicio[numero];
-    duracion.textContent = "Duración del contrato: "+this.duraciones[numero];
-    vencimiento.textContent = "Fecha de finalización: "+this.fechas_fin[numero];
 
     dimensiones.textContent = "Dimensiones: "+this.dimensiones[numero];
     precio.textContent = "Precio mensual: "+this.precios[numero];

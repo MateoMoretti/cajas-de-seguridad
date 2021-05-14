@@ -11,16 +11,23 @@ export class AppComponent {
   modal:any;
 
 
-  tipo_modal = ["Alquilada por: ", "Alquilada por: ", "Caja disponible "]
+  tipo_modal = ["Alquilada por: ", "Alquilada por: ", "Disponible "]
+
+  cajas = ["A01", "A02", "A03", "A04", "A05",
+          "B01", "B02", "B03", "B04", "B05",
+          "C01", "C02", "C03", "C04", "C05",
+          "D01", "D02", "D03", "D04", "D05"]
 
   personas = ["Kyrie Irving", "Mateo Moretti", "Renato Moretti", "Nicanor Cellati", "Danilo Benitez",
             "Facundo Figliuolo", "Leo Messi", "Esteban Ballesteros", "Damian Lillard", "Magic Johnson",
           "Pedro Lopez", "Jeremy Lin", "Russell Westbrook", "Alex Caruso", "Nacho Bermudez",
+          "Paul George", "Kawhi Leonard", "Anthony Davis", "Rafael Nadal", "Roger Federer"
           ]
 
-  permitidas = ["Julius Randle", "Lonzo Ball", "Brandon Ingram", "Josh Hart", "JJ Redick", "Jimmy Buttler",
-                "Tyler Herro", "Bam Adebayo", "Goran Dragic", "Terry Rozier", "Miles Bridges", "Carmelo Anthony",
-              "Jaylen Brown", "Jason Tatum", "Kemba Walker", "DeAndre Jordan"]
+  permitidas = ["Julius Randle", "Lonzo Ball", "Brandon Ingram", "Josh Hart", "JJ Redick",
+              "Jimmy Buttler", "Tyler Herro", "Bam Adebayo", "Goran Dragic", "Terry Rozier", 
+              "Miles Bridges", "Carmelo Anthony", "Jaylen Brown", "Jason Tatum", "Kemba Walker",
+              "DeAndre Jordan", "Eric Bledsoe", "Brook Lopez", "Tacko Fall", "Eduardo Lopez"]
 
   fechas_inicio = ["01/06/2020", "01/07/2020", "01/08/2020", "01/09/2020", "01/10/2020", 
                   "10/06/2020", "12/07/2020", "11/08/2020", "05/09/2020", "22/10/2020",
@@ -66,6 +73,7 @@ export class AppComponent {
 
     this.modal.style.display = "block";
 
+    var caja = document.getElementById("caja");
     var titular = document.getElementById("titular");
     var personas_permitidas = document.getElementById("permitidos");
     var inicio = document.getElementById("inicio");
@@ -74,8 +82,8 @@ export class AppComponent {
     var dimensiones = document.getElementById("dimensiones");
     var precio = document.getElementById("precio");
 
-    
-    titular.textContent = this.tipo_modal[tipo_modal];
+    //caja.textContent = this.cajas[numero];
+    titular.textContent = "Caja "+this.cajas[numero]+". "+this.tipo_modal[tipo_modal];
     if(tipo_modal != 2){
       console.log(tipo_modal);
       personas_permitidas.textContent = "Otras personas con acceso: "+this.permitidas[numero];

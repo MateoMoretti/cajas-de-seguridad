@@ -296,8 +296,13 @@ svg#clouds {
     border-bottom: 1px dotted black;
     padding: .5em;
     border-radius: 25px;
-    width: 50px;
+    width: 150px;
+    height: 100px;
     align-items: center;
+    align-content: center;
+    font-size: 20px;
+    text-align: center;
+    text-align-last: center;
 }
 
 .ocupado {

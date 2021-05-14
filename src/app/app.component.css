@@ -382,29 +382,74 @@ svg#clouds {
     opacity: 1;
 }
 
+.por-vencer {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    background-color: #f7e75d;
+    border: 2px solid rgb(0, 0, 0);
+    padding: .5em;
+    border-radius: 25px;
+    width: 50px;
+}
 
-  .contenedor-caja-pendiente-expiracion {
+.por-vencer .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.por-vencer .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.por-vencer:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.contenedor-caja-pendiente-expiracion {
     width: 221.5px;
     height: 112.1px;
     border-radius: 51.9px;
     background-color: #b6c720;
-  }
+}
 
-  .contenedor-caja-alquilada {
+.contenedor-caja-alquilada {
     width: 221.5px;
     height: 112.1px;
     border-radius: 51.9px;
     background-color: #0dac65;
-  }
+}
 
-  .contenedor-caja-disponible {
+.contenedor-caja-disponible {
     width: 221.5px;
     height: 112.1px;
     border-radius: 51.9px;
     background-color: #828885;
-  }
+}
 
-  .texto-dentro-de-las-cajas {
+.texto-dentro-de-las-cajas {
     width: 84px;
     height: 32px;
     margin: 12.9px 0 0 16.3px;
@@ -417,4 +462,4 @@ svg#clouds {
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-  }
+}

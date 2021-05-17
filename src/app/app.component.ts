@@ -13,6 +13,10 @@ export class AppComponent {
 
   tipo_modal = ["Alquilada por: ", "Alquilada por: ", "Disponible "]
 
+  busquedaLetra = ['A', 'B', 'C', 'D']
+  
+  busquedaLetraNumero = ['A0','B0','C0','D0']
+                          
   cajas = ["A01", "A02", "A03", "A04", "A05",
           "B01", "B02", "B03", "B04", "B05",
           "C01", "C02", "C03", "C04", "C05",
@@ -59,10 +63,11 @@ export class AppComponent {
 
   constructor() {}
 
+    filtro = '';
+
   ngOnInit(): void {
 
     // Get the modal
-    
     this.modal = document.getElementById("myModal");    
   }
 
@@ -82,16 +87,10 @@ export class AppComponent {
     var dimensiones = document.getElementById("dimensiones");
     var precio = document.getElementById("precio");
 
-    
-    personas_permitidas.textContent = "";
-    titular.textContent += "";
-    inicio.textContent = "";
-    duracion.textContent = "";
-    vencimiento.textContent = "";
-
     //caja.textContent = this.cajas[numero];
     titular.textContent = "Caja "+this.cajas[numero]+". "+this.tipo_modal[tipo_modal];
     if(tipo_modal != 2){
+      console.log(tipo_modal);
       personas_permitidas.textContent = "Otras personas con acceso: "+this.permitidas[numero];
       titular.textContent += this.personas[numero];
       inicio.textContent = "Fecha de inicio: "+this.fechas_inicio[numero];

@@ -82,10 +82,16 @@ export class AppComponent {
     var dimensiones = document.getElementById("dimensiones");
     var precio = document.getElementById("precio");
 
+    
+    personas_permitidas.textContent = "";
+    titular.textContent += "";
+    inicio.textContent = "";
+    duracion.textContent = "";
+    vencimiento.textContent = "";
+
     //caja.textContent = this.cajas[numero];
     titular.textContent = "Caja "+this.cajas[numero]+". "+this.tipo_modal[tipo_modal];
     if(tipo_modal != 2){
-      console.log(tipo_modal);
       personas_permitidas.textContent = "Otras personas con acceso: "+this.permitidas[numero];
       titular.textContent += this.personas[numero];
       inicio.textContent = "Fecha de inicio: "+this.fechas_inicio[numero];

@@ -46,15 +46,20 @@ export class CapitalComponent {
                 "27/02/2021", "28/07/2021", "25/05/2021", "19/04/2021", "16/05/2021" ]
 
 
-  dimensiones = ["60x60 cms", "70x70 cms", "80x80 cms", "90x90 cms", "50x90 cms", 
-                "60x80 cms", "50x70 cms", "40x40 cms", "40x60 cms", "50x25cms",
-                "90x60 cms", "40x70 cms", "35x80 cms", "30x90 cms", "50x90 cms", 
-                "20x80 cms", "30x70 cms", "45x45 cms", "120x60 cms", "90x65cms"]
+  dimensiones = ["60x60x80 cms", "70x70x70 cms", "80x80x40 cms", "90x90x60 cms", "50x90x70 cms", 
+                "60x80x70 cms", "50x70x80 cms", "40x40x50 cms", "40x60x40 cms", "50x25x50cms",
+                "90x60x60 cms", "40x70x70 cms", "35x80x50 cms", "30x90x60 cms", "50x90x50 cms", 
+                "20x80x70 cms", "30x70x70 cms", "45x4560 cms", "120x60x80 cms", "90x65x80cms"]
                 
   precios = ["$1000", "$900", "$500", "$600", "$700", 
             "$1200", "$750", "$700", "$1200", "$900", 
             "$1400", "$950", "$400", "$1600", "$650", 
             "$1600", "$500", "$500", "$1800", "$1300", ]
+
+  estado_cuenta = ["Al día", "Con deuda","Al día", "Con deuda","Al día", 
+                  "Al día", "Con deuda", "Al día", "Con deuda", "Con deuda",
+                  "Al día", "Con deuda","Al día", "Con deuda","Al día", 
+                  "Al día", "Con deuda", "Al día", "Con deuda", "Con deuda"]
 
 
 
@@ -83,6 +88,7 @@ export class CapitalComponent {
     var vencimiento = document.getElementById("vencimiento");
     var dimensiones = document.getElementById("dimensiones");
     var precio = document.getElementById("precio");
+    var estado_cuenta = document.getElementById("estado_cuenta");
 
     
     personas_permitidas.textContent = "";
@@ -90,6 +96,8 @@ export class CapitalComponent {
     inicio.textContent = "";
     duracion.textContent = "";
     vencimiento.textContent = "";
+    vencimiento.textContent = "";
+    estado_cuenta.textContent = "";
 
     //caja.textContent = this.cajas[numero];
     titular.textContent = "Caja "+this.cajas[numero]+". "+this.tipo_modal[tipo_modal];
@@ -99,6 +107,7 @@ export class CapitalComponent {
       inicio.textContent = "Fecha de inicio: "+this.fechas_inicio[numero];
       duracion.textContent = "Duración del contrato: "+this.duraciones[numero];
       vencimiento.textContent = "Fecha de finalización: "+this.fechas_fin[numero];
+      estado_cuenta.textContent = "Estado de cuenta: "+this.estado_cuenta[numero];
     }
 
     dimensiones.textContent = "Dimensiones: "+this.dimensiones[numero];

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-chacabuco',
-  templateUrl: './chacabuco.component.html',
+  selector: 'app-rosario',
+  templateUrl: './rosario.component.html',
   styleUrls: ['./app.component.css']
 })
-export class ChacabucoComponent {
+export class RosarioComponent {
   title = 'cajas-de-seguridad';
 
   modal:any;

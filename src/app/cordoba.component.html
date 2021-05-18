@@ -25,9 +25,10 @@
             <label for="sucursal" style="margin-right: 5px;">Sucursal: </label>
 
             <select name="sucursal" id="sucursal" (change)="redirigir($event.target.value)">
-                <option value="junin">Junin</option>
-                <option value="lincoln" selected=true>Lincoln</option>
-                <option value="chacabuco" >Chacabuco</option>
+                
+                <option value="">Capital Federal</option>
+                <option value="cordoba" selected=true>Córdoba</option>
+                <option value="rosario">Rosario</option>
             </select>
         </div>
         <div class="row" style="margin-top: 35px;">

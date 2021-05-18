@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChacabucoComponent } from './chacabuco.component';
-import { JuninComponent } from './junin.component';
-import { LincolnComponent } from './lincoln.component';
+import { RosarioComponent } from './rosario.component';
+import { CapitalComponent } from './capital.component';
+import { CordobaComponent } from './cordoba.component';
 
 const routes: Routes = [
-  {path: 'junin', component: JuninComponent},
-  {path: 'lincoln', component: LincolnComponent},
-  {path: 'chacabuco', component: ChacabucoComponent}];
+  {path: '', component: CapitalComponent},
+  {path: 'cordoba', component: CordobaComponent},
+  {path: 'rosario', component: RosarioComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-lincoln',
-  templateUrl: './lincoln.component.html',
+  selector: 'app-root',
+  templateUrl: './capital.component.html',
   styleUrls: ['./app.component.css']
 })
-export class LincolnComponent {
+export class CapitalComponent {
   title = 'cajas-de-seguridad';
 
   modal:any;
@@ -19,10 +19,11 @@ export class LincolnComponent {
           "C01", "C02", "C03", "C04", "C05",
           "D01", "D02", "D03", "D04", "D05"]
 
-  personas = ["Kevin Garnett","Paul Pierce","Rajon Rondo","Ray Allen","Kendrick Perkins",
-              "Travis Scott","Swae Lee","Wiz Khalifa","Chris Brown","Eric Bellinger",
-              "Dennis Smith","Jabari Parker","Anthony Edwards","DeAndre Ayton","Andrew Wiggins",
-              "Joel Embiid","Tobias Harris","Brook Lopez","Ja Morant","Chris Paul"]
+  personas = ["Kyrie Irving", "Mateo Moretti", "Renato Moretti", "Nicanor Cellati", "Danilo Benitez",
+            "Facundo Figliuolo", "Leo Messi", "Esteban Ballesteros", "Damian Lillard", "Magic Johnson",
+          "Pedro Lopez", "Jeremy Lin", "Russell Westbrook", "Alex Caruso", "Nacho Bermudez",
+          "Paul George", "Kawhi Leonard", "Anthony Davis", "Rafael Nadal", "Roger Federer"
+          ]
 
   permitidas = ["Julius Randle", "Lonzo Ball", "Brandon Ingram", "Josh Hart", "JJ Redick",
               "Jimmy Buttler", "Tyler Herro", "Bam Adebayo", "Goran Dragic", "Terry Rozier", 
@@ -60,7 +61,7 @@ export class LincolnComponent {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    console.log("Chacabuco");
+    console.log("Junin");
 
     // Get the modal
     
@@ -116,7 +117,6 @@ export class LincolnComponent {
   }
 
   redirigir(ciudad:string){
-    console.log("veremo");
     this.router.navigate([ciudad]);
   }
 

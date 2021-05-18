@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChacabucoComponent } from './chacabuco.component';
-import { JuninComponent } from './junin.component';
-import { LincolnComponent } from './lincoln.component';
+import { RosarioComponent } from './rosario.component';
+import { CapitalComponent } from './capital.component';
+import { CordobaComponent } from './cordoba.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JuninComponent,
-    ChacabucoComponent,
-    LincolnComponent
+    CapitalComponent,
+    RosarioComponent,
+    CordobaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

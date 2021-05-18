@@ -132,12 +132,35 @@
             <hr>
             <p id="dimensiones"></p>
             <p id="precio"></p>
-            <hr>
+            <hr *ngIf="is_ocupada()">
             <p id="inicio"></p>
             <p id="duracion"></p>
             <p id="vencimiento"></p>
-            <hr>
+            <hr *ngIf="is_ocupada()">
             <p id="estado_cuenta"></p>
+            <button *ngIf="is_ocupada() && !mostrar_visitas" (click)="alternar_muestra_visitas()">Visitas</button>
+            <button *ngIf="is_ocupada() && mostrar_visitas" (click)="alternar_muestra_visitas()">Ocultar visitas</button>
+            <div class="mt-5 animated fadeIn" *ngIf="mostrar_visitas">
+                <table class="row-border hover ">
+                    <thead>
+                        <tr>
+                            <th>Fecha de visita</th>
+                            <th>Persona</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ fechas_inicio[numero] }}</td>
+                            <td>{{ personas[numero] }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ fechas_inicio[numero] }}</td>
+                            <td>{{ permitidas[numero] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </div>
 

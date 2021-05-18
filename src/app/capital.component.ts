@@ -61,7 +61,8 @@ export class CapitalComponent {
                   "Al día", "Con deuda","Al día", "Con deuda","Al día", 
                   "Al día", "Con deuda", "Al día", "Con deuda", "Con deuda"]
 
-
+  mostrar_visitas = false;
+  numero:number;
 
   constructor(private router: Router) {}
 
@@ -75,8 +76,7 @@ export class CapitalComponent {
 
 
   abrir(tipo_modal:number, numero:number){
-
-
+    this.numero = numero;
 
     this.modal.style.display = "block";
 
@@ -121,6 +121,19 @@ export class CapitalComponent {
     } 
   }
 
+
+  is_ocupada(){
+    var vencimiento = document.getElementById("vencimiento");
+    if(vencimiento.textContent === ""){
+      return false;
+    }
+    return true;
+  }
+
+  alternar_muestra_visitas(){
+    this.mostrar_visitas = !this.mostrar_visitas;
+  }
+
   cerrar() {
     this.modal.style.display = "none";
   }
@@ -128,6 +141,8 @@ export class CapitalComponent {
   redirigir(ciudad:string){
     this.router.navigate([ciudad]);
   }
+
+
 
 }
 

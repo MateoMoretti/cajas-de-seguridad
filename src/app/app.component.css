@@ -255,3 +255,9 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+table {
+    width: 300px;
+    float: center;
+    margin: 0 20px 20px 0;
+}

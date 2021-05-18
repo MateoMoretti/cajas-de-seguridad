@@ -11,6 +11,9 @@ export class CordobaComponent {
 
   modal:any;
 
+  busquedaLetra = ['A', 'B', 'C', 'D']
+  
+  busquedaLetraNumero = ['A0','B0','C0','D0']
 
   tipo_modal = ["Alquilada por: ", "Alquilada por: ", "Disponible "]
 
@@ -62,12 +65,19 @@ estado_cuenta = ["Al día", "Con deuda","Al día", "Con deuda","Al día",
 
   constructor(private router: Router) {}
 
+  filtro = '' 
+
   ngOnInit(): void {
     console.log("Chacabuco");
 
     // Get the modal
     
     this.modal = document.getElementById("myModal");    
+  }
+
+
+  filtroUpper():string{
+    return this.filtro.toUpperCase(); 
   }
 
 

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { RosarioComponent } from './rosario.component';
 import { CapitalComponent } from './capital.component';
 import { CordobaComponent } from './cordoba.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CordobaComponent } from './cordoba.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

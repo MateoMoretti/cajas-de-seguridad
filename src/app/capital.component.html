@@ -2,7 +2,7 @@
     <nav class="nav py-1 navbar p-5 toolbar" id="toolbar">
         <a class="navbar-brand" href="#"><img src="/assets/imgs/logo-la-guardiana-home.svg"></a>
         <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Nombre de caja" aria-label="Search">
+            <input class="form-control me-2" type="search" name="filtro" [(ngModel)]="filtro" placeholder="Nombre de caja" aria-label="Search">
             <button class="btn btn-sm btn-outline-light btn-salir mr-2" type="submit">Buscar</button>
         </form>
         <form class="d-flex">
@@ -32,89 +32,89 @@
             </select>
         </div>
         <div class="row" style="margin-top: 35px;">
-            <div class="tooltip ocupado cursor-pointer" (click)="abrir(0, 0)">
+            <div class="tooltip ocupado cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[0] || filtroUpper()==busquedaLetraNumero[0] || filtroUpper()=='A01'" (click)="abrir(0, 0)">
                 <p class="style-text">A01</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[0]}}</span>
             </div>
-            <div class="tooltip disponible cursor-pointer" (click)="abrir(2, 1)">
+            <div class="tooltip disponible cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[0] || filtroUpper()==busquedaLetraNumero[0] || filtroUpper()=='A02'" (click)="abrir(2, 1)">
                 <p class="style-text">A02</p>
                 <span class="tooltiptext">{{dimensiones[1]}}</span>
             </div>
-            <div class="tooltip ocupado cursor-pointer" (click)="abrir(0, 2)">
+            <div class="tooltip ocupado cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[0] || filtroUpper()==busquedaLetraNumero[0] || filtroUpper()=='A03'" (click)="abrir(0, 2)">
                 <p class="style-text">A03</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[2]}}</span>
             </div>
-            <div class="tooltip por-vencer cursor-pointer" (click)="abrir(1, 3)">
+            <div class="tooltip por-vencer cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[0] || filtroUpper()==busquedaLetraNumero[0] || filtroUpper()=='A04'" (click)="abrir(1, 3)">
                 <p class="style-text">A04</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[3]}}. Vence el {{fechas_fin[3]}}</span>
             </div>
-            <div class="tooltip ocupado cursor-pointer" (click)="abrir(0, 4)">
+            <div class="tooltip ocupado cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[0] || filtroUpper()==busquedaLetraNumero[0] || filtroUpper()=='A05'" (click)="abrir(0, 4)">
                 <p class="style-text">A05</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[4]}}</span>
             </div>
         </div>
         <div class="row" style="margin-top: 10px;">
-            <div class="tooltip ocupado cursor-pointer" (click)="abrir(0,5)">
+            <div class="tooltip ocupado cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[1] || filtroUpper()==busquedaLetraNumero[1] || filtroUpper()=='B01'" (click)="abrir(0,5)">
                 <p class="style-text">B01</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[5]}}</span>
             </div>
-            <div class="tooltip por-vencer cursor-pointer " (click)="abrir(1,6)">
+            <div class="tooltip por-vencer cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[1] || filtroUpper()==busquedaLetraNumero[1] || filtroUpper()=='B02'" (click)="abrir(1,6)">
                 <p class="style-text">B02</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[6]}}. Vence el {{fechas_fin[6]}}</span>
             </div>
-            <div class="tooltip disponible cursor-pointer" (click)="abrir(2,7)">
+            <div class="tooltip disponible cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[1] || filtroUpper()==busquedaLetraNumero[1] || filtroUpper()=='B03'"  (click)="abrir(2,7)">
                 <p class="style-text">B03</p>
                 <span class="tooltiptext">{{dimensiones[7]}}</span>
             </div>
-            <div class="tooltip ocupado cursor-pointer" (click)="abrir(0,8)">
+            <div class="tooltip ocupado cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[1] || filtroUpper()==busquedaLetraNumero[1] || filtroUpper()=='B04'" (click)="abrir(0,8)">
                 <p class="style-text">B04</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[8]}}</span>
             </div>
-            <div class="tooltip por-vencer cursor-pointer" (click)="abrir(1,9)">
+            <div class="tooltip por-vencer cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[1] || filtroUpper()==busquedaLetraNumero[1] || filtroUpper()=='B05'" (click)="abrir(1,9)">
                 <p class="style-text">B05</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[9]}}. Vence el {{fechas_fin[9]}}</span>
             </div>
         </div>
         <div class="row" style="margin-top: 10px;">
-            <div class="tooltip ocupado cursor-pointer" (click)="abrir(0,10)">
+            <div class="tooltip ocupado cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[2] || filtroUpper()==busquedaLetraNumero[2] || filtroUpper()=='C01'" (click)="abrir(0,10)">
                 <p class="style-text">C01</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[10]}}</span>
             </div>
-            <div class="tooltip disponible cursor-pointer" (click)="abrir(2,11)">
+            <div class="tooltip disponible cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[2] || filtroUpper()==busquedaLetraNumero[2] || filtroUpper()=='C02'" (click)="abrir(2,11)">
                 <p class="style-text">C02</p>
                 <span class="tooltiptext">{{dimensiones[11]}}</span>
             </div>
-            <div class="tooltip disponible cursor-pointer" (click)="abrir(2,12)">
+            <div class="tooltip disponible cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[2] || filtroUpper()==busquedaLetraNumero[2] || filtroUpper()=='C03'" (click)="abrir(2,12)">
                 <p class="style-text">C03</p>
                 <span class="tooltiptext">{{dimensiones[12]}}</span>
             </div>
-            <div class="tooltip por-vencer cursor-pointer" (click)="abrir(1,13)">
+            <div class="tooltip por-vencer cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[2] || filtroUpper()==busquedaLetraNumero[2] || filtroUpper()=='C04'" (click)="abrir(1,13)">
                 <p class="style-text">C04</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[13]}}. Vence el {{fechas_fin[13]}}</span>
             </div>
-            <div class="tooltip ocupado cursor-pointer" (click)="abrir(0,14)">
+            <div class="tooltip ocupado cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[2] || filtroUpper()==busquedaLetraNumero[2] || filtroUpper()=='C05'" (click)="abrir(0,14)">
                 <p class="style-text">C05</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[14]}}</span>
             </div>
         </div>
         <div class="row" style="margin-top: 10px; margin-bottom: 30px;">
-            <div class="tooltip ocupado cursor-pointer" (click)="abrir(0,15)">
+            <div class="tooltip ocupado cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[3] || filtroUpper()==busquedaLetraNumero[3] || filtroUpper()=='D01'" (click)="abrir(0,15)">
                 <p class="style-text">D01</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[15]}}</span>
             </div>
-            <div class="tooltip por-vencer cursor-pointer" (click)="abrir(1,16)">
+            <div class="tooltip por-vencer cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[3] || filtroUpper()==busquedaLetraNumero[3] || filtroUpper()=='D02'" (click)="abrir(1,16)">
                 <p class="style-text">D02</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[16]}}. Vence el {{fechas_fin[16]}}</span>
             </div>
-            <div class="tooltip disponible cursor-pointer" (click)="abrir(2,17)">
+            <div class="tooltip disponible cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[3] || filtroUpper()==busquedaLetraNumero[3] || filtroUpper()=='D03'" (click)="abrir(2,17)">
                 <p class="style-text">D03</p>
                 <span class="tooltiptext">{{dimensiones[17]}}</span>
             </div>
-            <div class="tooltip ocupado cursor-pointer" (click)="abrir(0,18)">
+            <div class="tooltip ocupado cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[3] || filtroUpper()==busquedaLetraNumero[3] || filtroUpper()=='D04'" (click)="abrir(0,18)">
                 <p class="style-text">D04</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[18]}}</span>
             </div>
-            <div class="tooltip ocupado cursor-pointer" (click)="abrir(0,19)">
+            <div class="tooltip ocupado cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[3] || filtroUpper()==busquedaLetraNumero[3] || filtroUpper()=='D05'" (click)="abrir(0,19)">
                 <p class="style-text">D05</p>
                 <span class="tooltiptext">Caja ocupada por {{personas[19]}}</span>
             </div>

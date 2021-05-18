@@ -10,7 +10,10 @@ export class CapitalComponent {
   title = 'cajas-de-seguridad';
 
   modal:any;
-
+ 
+  busquedaLetra = ['A', 'B', 'C', 'D']
+  
+  busquedaLetraNumero = ['A0','B0','C0','D0']
 
   tipo_modal = ["Alquilada por: ", "Alquilada por: ", "Disponible "]
 
@@ -65,6 +68,8 @@ export class CapitalComponent {
 
   constructor(private router: Router) {}
 
+  filtro = '' 
+
   ngOnInit(): void {
     console.log("Junin");
 
@@ -72,6 +77,12 @@ export class CapitalComponent {
     
     this.modal = document.getElementById("myModal");    
   }
+
+
+  filtroUpper():string{
+    return this.filtro.toUpperCase(); 
+  }
+
 
 
   abrir(tipo_modal:number, numero:number){

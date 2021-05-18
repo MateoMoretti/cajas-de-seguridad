@@ -11,6 +11,9 @@ export class RosarioComponent {
 
   modal:any;
 
+  busquedaLetra = ['A', 'B', 'C', 'D']
+  
+  busquedaLetraNumero = ['A0','B0','C0','D0']
 
   tipo_modal = ["Alquilada por: ", "Alquilada por: ", "Disponible "]
 
@@ -66,6 +69,8 @@ export class RosarioComponent {
 
   constructor(private router: Router) {}
 
+  filtro = '' 
+
   ngOnInit(): void {
     console.log("Chacabuco");
 
@@ -74,6 +79,9 @@ export class RosarioComponent {
     this.modal = document.getElementById("myModal");    
   }
 
+  filtroUpper():string{
+    return this.filtro.toUpperCase(); 
+  }
 
   abrir(tipo_modal:number, numero:number){
     this.numero = numero;

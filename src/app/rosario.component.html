@@ -6,11 +6,17 @@
             <button class="btn btn-sm btn-outline-light btn-salir mr-2" type="submit">Buscar</button>
         </form>
         <form class="d-flex">
-            <a class="" href="#"><img src="/assets/imgs/icon-user-home.svg" class="icon-user-home"></a>
-            <div class="btn-group">
-                <a role="button" id="navbarDropdownUser" class="nav-link dropdown-toggle text-usuario text-white" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false">
-                    USUARIO
-                </a>
+            <div class="me-3">
+                <a class="" href="#"><img src="/assets/imgs/icon-user-home.svg" class="icon-user-home"></a>
+                <div class="dropdown">
+                    <button class="dropbtn">USUARIO
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">Persona Fisica</a>
+                    <a href="#">Persona Juridica</a>
+                    </div>
+                </div>
             </div>
             <button class="btn btn-sm btn-outline-light btn-salir mr-2">SALIR</button>
         </form>
@@ -20,7 +26,7 @@
     <div class="content" role="main">
         <h1 style="color: black;">Cajas de seguridad</h1>
 
-        <div fxLayout=" row " fxLayoutAlign="start start " fxLayoutGap="gappx ">
+        <div fxLayout=" row " class="mt-3" fxLayoutAlign="start start " fxLayoutGap="gappx ">
 
             <label for="sucursal" style="margin-right: 5px;">Sucursal: </label>
 
@@ -30,6 +36,7 @@
                 <option value="rosario" selected=true>Rosario</option>
             </select>
         </div>
+
         <div class="row" style="margin-top: 35px;">
             <div class="tooltip por-vencer cursor-pointer" *ngIf="filtroUpper()=='' ||  filtroUpper()==busquedaLetra[0] || filtroUpper()==busquedaLetraNumero[0] || filtroUpper()=='A01'" (click)="abrir(1, 0)">
                 <p class="style-text">A01</p>

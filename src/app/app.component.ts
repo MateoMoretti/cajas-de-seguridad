@@ -63,12 +63,17 @@ export class AppComponent {
 
   constructor() {}
 
-    filtro = '';
+    filtro: string = '';
 
   ngOnInit(): void {
 
     // Get the modal
-    this.modal = document.getElementById("myModal");    
+    this.modal = document.getElementById("myModal"); 
+  }
+
+  
+  filtroUpper():string{
+    return this.filtro.toUpperCase(); 
   }
 
 
@@ -86,7 +91,10 @@ export class AppComponent {
     var vencimiento = document.getElementById("vencimiento");
     var dimensiones = document.getElementById("dimensiones");
     var precio = document.getElementById("precio");
-
+    
+  
+    
+    
     //caja.textContent = this.cajas[numero];
     titular.textContent = "Caja "+this.cajas[numero]+". "+this.tipo_modal[tipo_modal];
     if(tipo_modal != 2){

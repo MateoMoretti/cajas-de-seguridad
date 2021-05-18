@@ -132,6 +132,7 @@ export class CordobaComponent {
 
   cerrar() {
     this.modal.style.display = "none";
+    this.mostrar_visitas = false;
   }
   
 

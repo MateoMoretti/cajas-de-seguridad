@@ -147,6 +147,7 @@ export class CapitalComponent {
 
   cerrar() {
     this.modal.style.display = "none";
+    this.mostrar_visitas = false;
   }
 
   redirigir(ciudad:string){

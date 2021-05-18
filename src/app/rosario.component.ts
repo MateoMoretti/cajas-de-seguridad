@@ -131,6 +131,7 @@ export class RosarioComponent {
 
   cerrar() {
     this.modal.style.display = "none";
+    this.mostrar_visitas = false;
   }
 
   

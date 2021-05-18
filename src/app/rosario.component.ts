@@ -55,11 +55,14 @@ export class RosarioComponent {
             "$1400", "$950", "$400", "$1600", "$650", 
             "$1600", "$500", "$500", "$1800", "$1300", ]
 
-estado_cuenta = ["Al día", "Con deuda","Al día", "Con deuda","Al día", 
+  estado_cuenta = ["Al día", "Con deuda","Al día", "Con deuda","Al día", 
             "Al día", "Con deuda", "Al día", "Con deuda", "Con deuda",
             "Al día", "Con deuda","Al día", "Con deuda","Al día", 
             "Al día", "Con deuda", "Al día", "Con deuda", "Con deuda"]
 
+            
+  mostrar_visitas = false;
+  numero:number;
 
   constructor(private router: Router) {}
 
@@ -73,8 +76,7 @@ estado_cuenta = ["Al día", "Con deuda","Al día", "Con deuda","Al día",
 
 
   abrir(tipo_modal:number, numero:number){
-
-
+    this.numero = numero;
 
     this.modal.style.display = "block";
 
@@ -122,6 +124,21 @@ estado_cuenta = ["Al día", "Con deuda","Al día", "Con deuda","Al día",
   cerrar() {
     this.modal.style.display = "none";
   }
+
+  
+
+  is_ocupada(){
+    var vencimiento = document.getElementById("vencimiento");
+    if(vencimiento.textContent === ""){
+      return false;
+    }
+    return true;
+  }
+
+  alternar_muestra_visitas(){
+    this.mostrar_visitas = !this.mostrar_visitas;
+  }
+
 
   redirigir(ciudad:string){
     console.log("veremo");

@@ -48,7 +48,7 @@ export class CordobaComponent {
                 "27/02/2021", "28/07/2021", "25/05/2021", "19/04/2021", "16/05/2021" ]
 
 
-dimensiones = ["60x60x80 cms", "70x70x70 cms", "80x80x40 cms", "90x90x60 cms", "50x90x70 cms", 
+  dimensiones = ["60x60x80 cms", "70x70x70 cms", "80x80x40 cms", "90x90x60 cms", "50x90x70 cms", 
                 "60x80x70 cms", "50x70x80 cms", "40x40x50 cms", "40x60x40 cms", "50x25x50cms",
                 "90x60x60 cms", "40x70x70 cms", "35x80x50 cms", "30x90x60 cms", "50x90x50 cms", 
                 "20x80x70 cms", "30x70x70 cms", "45x4560 cms", "120x60x80 cms", "90x65x80cms"]
@@ -58,10 +58,13 @@ dimensiones = ["60x60x80 cms", "70x70x70 cms", "80x80x40 cms", "90x90x60 cms", "
             "$1400", "$950", "$400", "$1600", "$650", 
             "$1600", "$500", "$500", "$1800", "$1300", ]
 
-estado_cuenta = ["Al día", "Con deuda","Al día", "Con deuda","Al día", 
+  estado_cuenta = ["Al día", "Con deuda","Al día", "Con deuda","Al día", 
             "Al día", "Con deuda", "Al día", "Con deuda", "Con deuda",
             "Al día", "Con deuda","Al día", "Con deuda","Al día", 
             "Al día", "Con deuda", "Al día", "Con deuda", "Con deuda"]
+
+  mostrar_visitas = false;
+  numero:number;
 
   constructor(private router: Router) {}
 
@@ -82,8 +85,7 @@ estado_cuenta = ["Al día", "Con deuda","Al día", "Con deuda","Al día",
 
 
   abrir(tipo_modal:number, numero:number){
-
-
+    this.numero = numero;
 
     this.modal.style.display = "block";
 
@@ -131,6 +133,20 @@ estado_cuenta = ["Al día", "Con deuda","Al día", "Con deuda","Al día",
   cerrar() {
     this.modal.style.display = "none";
   }
+  
+
+  is_ocupada(){
+    var vencimiento = document.getElementById("vencimiento");
+    if(vencimiento.textContent === ""){
+      return false;
+    }
+    return true;
+  }
+
+  alternar_muestra_visitas(){
+    this.mostrar_visitas = !this.mostrar_visitas;
+  }
+
 
   redirigir(ciudad:string){
     console.log("veremo");
